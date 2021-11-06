@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e9e5e51f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.247);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(7, 211, 247, 0.329);
+}
+
+body {
+  @apply bg-bismark-700;
+}
+body {
+  overflow-x: hidden;
+}
+* {
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.pointer:hover {
+  cursor: pointer;
+}
+
+.heading {
+  @apply text-faded-jade-200 font-bold text-5xl pt-6 pb-1;
+}
+.sub-heading {
+  @apply text-bismark-400 font-medium text-2xl pb-6;
+}
+.paragraph {
+  @apply font-light text-bismark-200;
+}
+.button {
+  @apply bg-affair-100 px-6 py-3 rounded-lg text-affair-700 capitalize;
+}
+.button:hover {
+  @apply bg-affair-900 text-affair-300;
+}
+
+.background2 {
+  @apply bg-faded-jade-300;
+}
+.heading2 {
+  @apply text-bismark-700 font-bold text-5xl pt-6 pb-1;
+}
+.sub-heading2 {
+  @apply text-faded-jade-600 font-medium text-2xl pb-6;
+}
+.paragraph2 {
+  @apply font-light text-faded-jade-700;
+}
+.button2 {
+  @apply bg-affair-100 px-6 py-3 rounded-lg text-affair-700 capitalize;
+}
+.button2:hover {
+  @apply bg-affair-900 text-affair-300;
+}
+
+.background3 {
+  @apply bg-affair-100;
+}
+.heading3 {
+  @apply text-affair-800 font-bold text-5xl pt-6 pb-1;
+}
+.sub-heading3 {
+  @apply text-affair-700 font-medium text-2xl pb-6;
+}
+.paragraph3 {
+  @apply font-light text-bismark-600;
+}
+.button3 {
+  @apply bg-affair-100 px-6 py-3 rounded-lg text-affair-700 capitalize;
+}
+.button3:hover {
+  @apply bg-affair-900 text-affair-300;
+}
+
+.container2{
+  @apply px-6 lg:px-24;
+}
+
+.hero-gradient{
+  background: rgb(15,9,16);
+background: linear-gradient(0deg, rgba(15,9,16,1) 0%, rgba(72,5,71,1) 35%, rgba(98,8,46,1) 100%);
+}
