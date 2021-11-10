@@ -1,7 +1,9 @@
 import 'tailwindcss/tailwind.css'
 import "../style/index.css";
 import "../pages/auth/style.css"
-import "../components/Navbar/style.css"
+import "../components/Navbar/style.css";
+import "../components/Homepage/homepage.css";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 // pages/_app.js
 import { Provider } from "next-auth/client"
@@ -12,7 +14,9 @@ export default function App({
 }) {
   return (
     <Provider session={session}>
-      <Component {...pageProps} />
+      <ParallaxProvider>
+        <Component {...pageProps} />
+      </ParallaxProvider>
     </Provider>
-  )
+  );
 }
