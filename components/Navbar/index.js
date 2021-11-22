@@ -46,12 +46,12 @@ function Navbar() {
   const handleScroll = () => {
     if (window.scrollY > 250) {
       document.querySelector(".navbar").className = "navbar fixed p-6 flex items-center justify-between left-0 right-0 container2 nav-scroll";
-      document.querySelector(".menuOverlay").className = "menuOverlay text-bismark-700 lg:text-white  bg-yellow-500 lg:bg-bismark-700 menuOverlayScroll";
-      document.querySelector(".quoteButton").className= "quoteButton  mr-16 px-4 py-1 rounded font-normal text-bismark-700  bg-yellow-300 ";
+      // document.querySelector(".menuOverlay").className = "menuOverlay text-bismark-700 lg:text-white  bg-yellow-500 lg:bg-bismark-700 menuOverlayScroll";
+      // document.querySelector(".quoteButton").className= "quoteButton  mr-16 px-4 py-1 rounded font-normal text-white  bg-yellow-400 ";
     } else {
       document.querySelector(".navbar").className = "navbar fixed p-6 flex items-center justify-between left-0 right-0 container2";
-      document.querySelector(".menuOverlay").className = "menuOverlay text-bismark-700 lg:text-white  bg-yellow-500 lg:bg-bismark-700 ";
-      document.querySelector(".quoteButton").className ="quoteButton mr-16 px-4 py-1 rounded font-normal text-bismark-700 lg:text-white  bg-yellow-300 lg:bg-bismark-700 ";
+      // document.querySelector(".menuOverlay").className = "menuOverlay text-bismark-700 lg:text-white  bg-yellow-500 lg:bg-bismark-700 ";
+      // document.querySelector(".quoteButton").className ="quoteButton mr-16 px-4 py-1 rounded font-normal text-bismark-700 lg:text-white  bg-yellow-300 lg:bg-bismark-700 ";
     }
     // console.log(window.scrollY);
   };
@@ -66,19 +66,19 @@ function Navbar() {
   return (
     <nav className="navbar fixed p-6 flex items-center justify-between left-0 right-0 container2 ">
       <div className="logoContainer">
-        <div className={"text-3xl logo text-yellow-300"} title="INSCAPE">
+        <div className={"text-3xl logo text-yellow-500"} title="INSCAPE">
           INSCAPE
         </div>
       </div>
       <div className={"flex items-center "}>
-        <div className={"quoteButton mr-16 px-4 py-1 rounded font-normal text-bismark-700 lg:text-white  bg-yellow-300 lg:bg-bismark-700"}>
-          <Link href="/">GET QUOTE</Link>
+        <div onClick={()=>setOpen(false)} className={"quoteButton mr-16 px-4 py-1 rounded font-normal text-white  bg-yellow-500"}>
+          <Link href="#contact-us">GET QUOTE</Link>
         </div>
         <div
           onClick={()=>setOpen(!open)}
           className={"relative flex items-center justify-center"}
         >
-          <div style={style} className={"menuOverlay text-bismark-700 lg:text-white  bg-yellow-500 lg:bg-bismark-700 "}></div>
+          <div style={style} className={"menuOverlay text-white  bg-yellow-500"}></div>
           <div className="z-50 overflow-hidden" style={{ maxHeight: "30px", maxWidth: "30px", width:"30px",height:"30px" }}>
               <RiveComponent/>
             </div>
@@ -87,7 +87,7 @@ function Navbar() {
       <aside style={style2} className="hardText tracking-widest sidemenu mx-auto p-5 text-bismark-700 lg:text-white">
         <div className="h-screen flex items-center ">
           <ul className="mb-16">
-            <li className="pointer mb-6">
+            <li onClick={()=>setOpen(!open)} className="pointer mb-6" onClick={()=>setOpen(!open)}>
               <Link href="/">
                 <div className="flex">
                   <div  className="text-3xl hardText pr-4">01.</div>
@@ -97,8 +97,8 @@ function Navbar() {
                 </div>
               </Link>
             </li>
-            <li className="pointer mb-6">
-              <Link href="/about-us">
+            {/* <li onClick={()=>setOpen(!open)} className="pointer mb-6">
+              <Link href="#about-us">
                  <div className="flex">
                   <div  className="text-3xl hardText pr-4">02.</div>
                 <div className={"logo text-7xl hover:underline  "} title="ABOUT US">
@@ -106,9 +106,9 @@ function Navbar() {
                 </div>
                 </div>
               </Link>
-            </li>
-            <li className="pointer mb-6">
-              <Link href="/contact-us">
+            </li> */}
+            <li onClick={()=>setOpen(!open)} className="pointer mb-6">
+              <Link href="#contact-us">
                 <div className="flex">
                   <div  className="text-3xl hardText pr-4">03.</div>
                 <div className={"logo text-7xl hover:underline"} title="CONTACT US">
@@ -117,7 +117,7 @@ function Navbar() {
                 </div>
               </Link>
             </li>
-            <li className="pointer mb-6">
+            {/* <li className="pointer mb-6">
               <Link href="/about-us">
                 <div className="flex">
                   <div  className="text-3xl hardText pr-4">04.</div>
@@ -126,8 +126,8 @@ function Navbar() {
                 </div>
                 </div>
               </Link>
-            </li>
-            <li className="pointer mb-6">
+            </li> */}
+            {/* <li className="pointer mb-6">
               <Link href="/account">
                 <div className="flex">
                   <div  className="text-3xl hardText pr-4">05.</div>
@@ -136,8 +136,8 @@ function Navbar() {
                 </div>
                 </div>
               </Link>
-            </li>
-            <li className=" pointer mb-6">
+            </li> */}
+            {/* <li className=" pointer mb-6">
               <div className="flex">
                 <div className="text-3xl hardText pr-4">06
                   .</div>
@@ -145,7 +145,7 @@ function Navbar() {
                   SIGN OUT
               </div>
               </div>
-            </li>
+            </li> */}
           </ul>
         </div>
       </aside>

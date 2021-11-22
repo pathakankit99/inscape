@@ -96,3 +96,13 @@ body {
 .hardText{
   font-family: 'Bangers', cursive;
 }
+
+.h-50{
+  height: 50vh;
+}
+.h-30{
+  height: 30vh;
+}
+.center{
+  @apply flex items-center justify-center w-full h-full;
+}
