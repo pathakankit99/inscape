@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Link from "next/link"
-import Header from '../components/Header'
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -8,7 +7,6 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
       <div className="background p-24">
         <h1 className="heading">Heading</h1>
         <h2 className="sub-heading">sub Heading</h2>
