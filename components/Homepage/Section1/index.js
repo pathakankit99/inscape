@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import { useRive, useStateMachineInput } from "rive-react";
+import * as bg from "../../../public/images/bg.jpg"
 function index() {
   const [value, setValue] = useState(50);
   
@@ -28,16 +29,29 @@ function index() {
   
     // console.log(onPressedInput, value);
     return (
-      <section className="lg:max-h-screen bg-indigo-900 flex justify-center items-center flex-wrap min-h-screen">
-        <div className="container2 min-h-screen lg:h-auto p-6 text-center lg:text-left w-full lg:w-6/12 h-full lg:h-auto pt-24 lg:pt-0 flex items-center justify-center lg:justify-start">
+      <section className="relative min-h-screen ">
+        <img className="absolute top-0 bottom-0 hero-img" src="/images/bg2.jpg"/>
+        <div  className="hero absolute top-0 bottom-0 z-50 flex justify-center items-center flex-wrap relative">
+          <div className="container2 min-h-screen lg:h-auto p-6 text-center lg:text-left w-full lg:w-6/12 h-full lg:h-auto pt-24 lg:pt-0 flex items-center justify-center lg:justify-start">
           <div>
-            <h1 className="heading">Get Your Business online</h1>
+            <h1 className="heading hardText tracking-wider">Get Your Business online</h1>
             <h2 className="sub-heading">We help you go digital</h2>
           </div>
         </div>
-        <div className="w-full lg:w-6/12 min-h-screen hero-gradient">
-          <div className="w-full h-screen flex flex-col justify-between">
-            <div className="w-full h-5/6"><RiveComponent /></div>
+        <div className="w-full lg:w-5/12 min-h-screen">
+            <div className="w-full h-screen flex flex-col justify-between">
+              <div class="hero-image-container">
+                <div class="box">
+                  <div class="spin-container">
+                    <div class="shape">
+                      <div class="bd">
+                        <div className="w-full h-5/6"><RiveComponent /></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
             <div className="w-full bg-gray-100 p-6">
               <p className="text-center ">Slide to see your Business Grow</p>
               <input
@@ -51,6 +65,8 @@ function index() {
             </div>
           </div>
         </div>
+        </div>
+        
       </section>
     );
 }

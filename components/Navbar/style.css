@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 .nav-scroll{
-  @apply bg-bismark-800 shadow-xl;
+  @apply bg-bismark-700 shadow-xl;
 }
 nav{
   z-index: 999999;
