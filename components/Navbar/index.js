@@ -9,7 +9,7 @@ function Navbar() {
   const ON_PRESSED_INPUT_NAME = "Open";
 
   const { RiveComponent, rive } = useRive({
-    src: "https://piggish-wind.000webhostapp.com/menu.riv",
+    src: "https://inscape.mo.cloudinary.net/rives/menu.riv",
     stateMachines: STATE_MACHINE_NAME,
     artboard: "New Artboard",
     autoplay: true,
