@@ -10,7 +10,7 @@ function index() {
       >
         <div className="float-element -m-4 lg:-m-10">
           <Rive
-            src="https://piggish-wind.000webhostapp.com/runner_boy.riv"
+            src="https://inscape.mo.cloudinary.net/rives/runner_boy.riv"
             autoPlay
           />
         </div>
@@ -27,7 +27,7 @@ function index() {
         </div>
         {/* <div className="float-element float-right">
           <Rive
-            src="https://piggish-wind.000webhostapp.com/worm.riv"
+            src="https://inscape.mo.cloudinary.net/rives/worm.riv"
             autoPlay
           />
         </div> */}

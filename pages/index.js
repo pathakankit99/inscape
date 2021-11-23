@@ -8,11 +8,10 @@ import Section4 from "../components/Homepage/Section4";
 import Section5 from "../components/Homepage/Section5";
 export default function Home() {
   return (
-    <Layout2>
+    <Layout2 title="Inscape">
       <Section1 />
       <Section2 />
       <Section3 />
-
       <Section4 />
       <Section5 />
     </Layout2>

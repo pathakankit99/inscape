@@ -13,7 +13,7 @@ function index() {
   const ON_HANDS_UP = "hands_up";
 
   const { RiveComponent, rive } = useRive({
-    src: "https://piggish-wind.000webhostapp.com/teddy.riv",
+    src: "https://inscape.mo.cloudinary.net/rives/teddy.riv",
     stateMachines: STATE_MACHINE_NAME,
     artboard: "Artboard",
     autoplay: true,
@@ -40,58 +40,58 @@ function index() {
         <div className="container2 bg-white rounded-3xl lg:h-auto p-6 text-center lg:text-left w-full lg:w-6/12 h-full lg:h-auto lg:p-16 flex items-center justify-center lg:justify-start">
           <div className="w-full">
             <h5 className="pb-4 hardText font-medium text-4xl">Let's Solve Your Issue</h5>
-            <div class="mb-4">
+            <div className="mb-4">
               <label
-                class="block text-gray-700 text-sm font-bold mb-2"
-                for="name"
+                className="block text-gray-700 text-sm font-bold mb-2"
+                htmlFor="name"
               >
                 Full Name*
               </label>
               <input
-                class="appearance-none border-2 border-yellow-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none border-2 border-yellow-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="name"
                 type="text"
                 placeholder="ANTHONY GONSALVES"
               />
             </div>
-            <div class="mb-4">
+            <div className="mb-4">
               <label
-                class="block text-gray-700 text-sm font-bold mb-2"
-                for="email"
+                className="block text-gray-700 text-sm font-bold mb-2"
+                htmlFor="email"
               >
                 Email*
               </label>
               <input
-                class="appearance-none border-2 border-yellow-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none border-2 border-yellow-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="email"
                 type="email"
                 placeholder="ANTHONY@GMAIL.COM"
               />
             </div>
-            <div class="mb-4">
+            <div className="mb-4">
               <label
-                class="block text-gray-700 text-sm font-bold mb-2"
-                for="company"
+                className="block text-gray-700 text-sm font-bold mb-2"
+                htmlFor="company"
               >
                 Company Name
               </label>
               <input
-                class="appearance-none border-2 border-yellow-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none border-2 border-yellow-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="company"
                 type="text"
                 placeholder="INSCAPE"
               />
             </div>
-            <div class="mb-4">
+            <div className="mb-4">
               <label
-                class="block text-gray-700 text-sm font-bold mb-2"
-                for="contact"
+                className="block text-gray-700 text-sm font-bold mb-2"
+                htmlFor="contact"
               >
                 Contact Number*
               </label>
               <input
                 onFocus={()=>setCheck(true)} onBlur={()=>setCheck(false)}
-                class="appearance-none border-2 border-yellow-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="appearance-none border-2 border-yellow-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="contact"
                 type="number"
                 placeholder="+91 701785903"
