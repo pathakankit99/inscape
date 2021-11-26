@@ -44,7 +44,7 @@ function Navbar() {
   }, [open]);
 
   const handleScroll = () => {
-    if (window.scrollY > 250) {
+    if (window.scrollY > 50) {
       document.querySelector(".navbar").className = "navbar fixed p-6 flex items-center justify-between left-0 right-0 container2 nav-scroll";
       // document.querySelector(".menuOverlay").className = "menuOverlay text-bismark-700 lg:text-white  bg-yellow-500 lg:bg-bismark-700 menuOverlayScroll";
       // document.querySelector(".quoteButton").className= "quoteButton  mr-16 px-4 py-1 rounded font-normal text-white  bg-yellow-400 ";
@@ -66,31 +66,28 @@ function Navbar() {
   return (
     <nav className="navbar fixed p-6 flex items-center justify-between left-0 right-0 container2 ">
       <div className="logoContainer">
-        <div className={"text-3xl logo text-yellow-500"} title="INSCAPE">
+        <div className={"text-3xl logo text-brand-accent font-bold"}>
           INSCAPE
         </div>
       </div>
       <div className={"flex items-center "}>
-        <div onClick={()=>setOpen(false)} className={"quoteButton mr-16 px-4 py-1 rounded font-normal text-white  bg-yellow-500"}>
-          <Link href="#contact-us">GET QUOTE</Link>
-        </div>
         <div
           onClick={()=>setOpen(!open)}
           className={"relative flex items-center justify-center"}
         >
-          <div style={style} className={"menuOverlay text-white  bg-yellow-500"}></div>
+          <div style={style} className={"menuOverlay text-white  bg-brand-accent"}></div>
           <div className="z-50 overflow-hidden" style={{ maxHeight: "30px", maxWidth: "30px", width:"30px",height:"30px" }}>
               <RiveComponent/>
             </div>
         </div>
       </div>
-      <aside style={style2} className="hardText tracking-widest sidemenu mx-auto p-5 text-bismark-700 lg:text-white">
+      <aside style={style2} className="sidemenu mx-auto p-5 text-white">
         <div className="h-screen flex items-center ">
           <ul className="mb-16">
             <li onClick={()=>setOpen(!open)} className="pointer mb-6" onClick={()=>setOpen(!open)}>
               <Link href="/">
                 <div className="flex">
-                  <div  className="text-3xl hardText pr-4">01.</div>
+                  <div  className="text-3xl pr-4">01.</div>
                   <div className={"logo text-7xl hover:underline "} title="HOME">
                     HOME
                   </div>
@@ -100,7 +97,7 @@ function Navbar() {
             {/* <li onClick={()=>setOpen(!open)} className="pointer mb-6">
               <Link href="#about-us">
                  <div className="flex">
-                  <div  className="text-3xl hardText pr-4">02.</div>
+                  <div  className="text-3xl pr-4">02.</div>
                 <div className={"logo text-7xl hover:underline  "} title="ABOUT US">
                   ABOUT US
                 </div>
@@ -110,7 +107,7 @@ function Navbar() {
             <li onClick={()=>setOpen(!open)} className="pointer mb-6">
               <Link href="#contact-us">
                 <div className="flex">
-                  <div  className="text-3xl hardText pr-4">03.</div>
+                  <div  className="text-3xl pr-4">03.</div>
                 <div className={"logo text-7xl hover:underline"} title="CONTACT US">
                   CONTACT US
                 </div>
@@ -120,7 +117,7 @@ function Navbar() {
             {/* <li className="pointer mb-6">
               <Link href="/about-us">
                 <div className="flex">
-                  <div  className="text-3xl hardText pr-4">04.</div>
+                  <div  className="text-3xl pr-4">04.</div>
                 <div className={"logo text-7xl hover:underline"} title="AFFILIATE">
                   AFFILIATE
                 </div>
@@ -130,7 +127,7 @@ function Navbar() {
             {/* <li className="pointer mb-6">
               <Link href="/account">
                 <div className="flex">
-                  <div  className="text-3xl hardText pr-4">05.</div>
+                  <div  className="text-3xl pr-4">05.</div>
                 <div className={"logo text-7xl hover:underline"} title="ACCOUNT">
                   ACCOUNT
                 </div>
@@ -139,7 +136,7 @@ function Navbar() {
             </li> */}
             {/* <li className=" pointer mb-6">
               <div className="flex">
-                <div className="text-3xl hardText pr-4">06
+                <div className="text-3xl pr-4">06
                   .</div>
               <div onClick={() => signOut()} className={"logo text-7xl hover:underline"} title="SIGN OUT">
                   SIGN OUT

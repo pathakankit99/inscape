@@ -1,0 +1,207 @@
+
+.hero-gradient{
+  background: rgb(79,4,4);
+background: linear-gradient(0deg, rgba(79,4,4,1) 0%, rgba(253,105,29,1) 50%, rgba(252,199,69,1) 100%);
+}
+
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 5px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #1e07e7; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #1e07e7; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%;
+}
+
+
+.sectionCard{
+  position: sticky;
+  top:0;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+
+.demo-1 {
+  width: 200px;
+ height: 50px;  
+ overflow: hidden;
+ position: relative;
+ border-radius: 40px;
+ background-color: black;
+}
+.demo-1{
+  @apply text-yellow-400;
+}
+
+.demo-1 span {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 40px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);  
+ transform:translateX(100%);
+ /* Apply animation to this element */  
+ -moz-animation: demo-1 2s linear infinite;
+ -webkit-animation: demo-1 2s linear infinite;
+ animation: demo-1 2s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes demo-1 {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes demo-1 {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes demo-1 {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Firefox bug fix */
+ -webkit-transform: translateX(100%); /* Firefox bug fix */
+ transform: translateX(100%);     
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%); /* Firefox bug fix */
+ transform: translateX(-100%); 
+ }
+}
+
+.float-element{
+  height: 200px;
+  width:200px;
+}
+
+.icon{
+  width:100px;
+  height: 100px;
+  margin-right:50px;
+  margin-left:50px;
+}
+
+@keyframes rotation {
+ 0%   { 
+ -moz-transform: rotate(0deg); /* Firefox bug fix */
+ -webkit-transform: rotate(0deg); /* Firefox bug fix */
+ transform: rotate(0deg);     
+ }
+ 100% { 
+ -moz-transform: rotate(360deg); /* Firefox bug fix */
+ -webkit-transform: rotate(360deg); /* Firefox bug fix */
+ transform: rotate(360deg); 
+ }
+}
+
+.rotate{
+  animation-name: rotation;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* Hero shape */
+.hero-image-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.box {
+  width: 60vh;
+  height: 60vh;
+  // border: 1px dashed rgba(255,255,255,0.4);
+  position: relative;
+  
+}
+
+.spin-container {
+  width: 100%;
+  height: 100%;
+  // animation: spin 12s linear infinite;
+  position: relative;
+}
+
+.shape {
+  width: 100%;
+  height: 100%;
+  transition: border-radius 1s ease-out;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: morph 4s linear infinite both alternate;
+  position: absolute;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.bd {
+   background: rgb(79,4,4);
+background: linear-gradient(0deg, rgba(79,4,4,1) 0%, rgba(253,105,29,1) 50%, rgba(252,199,69,1) 100%);
+  width: 142%;
+  height: 142%;
+  position: absolute;
+  left: -21%;
+  top: -21%;
+  display: flex;
+  color: #003;
+  font-size: 5vw;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotate(-8 deg);
+  // animation: spin 12s linear infinite reverse;
+  opacity: 1;
+  z-index: 2;
+}
+
+@keyframes morph {
+  0% {border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;} 
+  100% {border-radius: 40% 60%;} 
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+.hero-img{
+  width: 100%;
+  height:100%;
+  object-fit:cover;
+}
