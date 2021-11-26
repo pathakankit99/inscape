@@ -1,19 +1,16 @@
 import Head from "next/head";
 import Layout2 from "../components/Layout2";
-import Section1 from "../components/Homepage/Section1";
-import Section2 from "../components/Homepage/Section2";
-import Section3 from "../components/Homepage/Section3";
-
-import Section4 from "../components/Homepage/Section4";
-import Section5 from "../components/Homepage/Section5";
+import Hero from "../components/Homepage/Hero";
+import Services from "../components/Homepage/Services";
+import Cta from "../components/Homepage/Cta";
+import Contact from "../components/Homepage/Contact";
 export default function Home() {
   return (
     <Layout2 title="Inscape">
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
+      <Hero />
+      <Services />
+      <Cta />
+      <Contact />
     </Layout2>
   );
 }

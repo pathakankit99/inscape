@@ -1,19 +1,7 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
-/* width */
-@font-face {
-  font-family: 'Bangers';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/bangers/v13/FeVQS0BTqb0h60ACH5BQ2Ixi.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
+
 * {
   font-family: "Poppins", sans-serif;
-  transition: all 0.3s ease-in-out;
-}
-.hardText{
-  font-family: 'Bangers', cursive;
+  transition: all 0.3s;
 }
 ::-webkit-scrollbar {
   width: 7px;
@@ -35,9 +23,6 @@
 }
 
 body {
-  @apply bg-bismark-700;
-}
-body {
   overflow-x: hidden;
 }
 
@@ -45,73 +30,15 @@ body {
   cursor: pointer;
 }
 
-.heading {
-  @apply text-white font-bold text-5xl pt-6 pb-1;
-}
-.sub-heading {
-  @apply text-bismark-200 font-medium text-2xl pb-6;
-}
-.paragraph {
-  @apply font-light text-bismark-200;
-}
-.button {
-  @apply bg-affair-100 px-6 py-3 rounded-lg text-affair-700 capitalize;
-}
-.button:hover {
-  @apply bg-affair-900 text-affair-300;
-}
-
-.background2 {
-  @apply bg-faded-jade-300;
-}
-.heading2 {
-  @apply text-bismark-700 font-bold text-5xl pt-6 pb-1;
-}
-.sub-heading2 {
-  @apply text-faded-jade-600 font-medium text-2xl pb-6;
-}
-.paragraph2 {
-  @apply font-light text-faded-jade-700;
-}
-.button2 {
-  @apply bg-affair-100 px-6 py-3 rounded-lg text-affair-700 capitalize;
-}
-.button2:hover {
-  @apply bg-affair-900 text-affair-300;
-}
-
-.background3 {
-  @apply bg-affair-100;
-}
-.heading3 {
-  @apply text-affair-800 font-bold text-5xl pt-6 pb-1;
-}
-.sub-heading3 {
-  @apply text-affair-700 font-medium text-2xl pb-6;
-}
-.paragraph3 {
-  @apply font-light text-bismark-600;
-}
-.button3 {
-  @apply bg-affair-100 px-6 py-3 rounded-lg text-affair-700 capitalize;
-}
-.button3:hover {
-  @apply bg-affair-900 text-affair-300;
-}
-
 .container2{
   @apply px-6 lg:px-24;
-}
-
-
-
-
-.h-50{
-  height: 50vh;
-}
-.h-30{
-  height: 30vh;
 }
 .center{
   @apply flex items-center justify-center w-full h-full;
 }
+
+/* // heading start */
+.section__title{
+    @apply p-6 lg:py-12 lg:px-0 text-2xl md:text-3xl lg:text-5xl font-extrabold text-brand-primary;
+}
+/* //heading end */

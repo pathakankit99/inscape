@@ -1,14 +1,5 @@
-
-/* latin */
-@font-face {
-  font-family: 'Bangers';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/bangers/v13/FeVQS0BTqb0h60ACH55Q2A.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
 .nav-scroll{
-  @apply bg-bismark-700 shadow-xl;
+  @apply bg-yellow-400 shadow-xl;
 }
 nav{
   z-index: 999999;
@@ -23,73 +14,13 @@ nav{
     transform: scale(1);
 }
 .sidemenu{
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 100;
-    transform: translateX(0%);
-    transition: all ease-in-out 0.5s;
-}
-
-.logo{
-  font-family: 'Bangers', cursive;
-  animation: glitch 1s linear infinite;
-}
-/* code below for logo glitch */
-@keyframes glitch{
-  2%,64%{
-    transform: translate(2px,0) skew(0deg);
-  }
-  4%,60%{
-    transform: translate(-2px,0) skew(0deg);
-  }
-  62%{
-    transform: translate(0,0) skew(5deg); 
-  }
-}
-
-.logo:before,
-.logo:after{
-  content: attr(title);
-  position: absolute;
+  position: fixed;
+  top: 0;
+  right: 0;
   left: 0;
-}
-
-.logo:before{
-  animation: glitchTop 1s linear infinite;
-  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-}
-
-@keyframes glitchTop{
-  2%,64%{
-    transform: translate(2px,-2px);
-  }
-  4%,60%{
-    transform: translate(-2px,2px);
-  }
-  62%{
-    transform: translate(13px,-1px) skew(-13deg); 
-  }
-}
-
-.logo:after{
-  animation: glitchBotom 1.5s linear infinite;
-  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-}
-
-@keyframes glitchBotom{
-  2%,64%{
-    transform: translate(-2px,0);
-  }
-  4%,60%{
-    transform: translate(-2px,0);
-  }
-  62%{
-    transform: translate(-22px,5px) skew(21deg); 
-  }
+  z-index: 100;
+  transform: translateX(0%);
+  transition: all ease-in-out 0.5s;
 }
 
 /* code below for menu items  */
