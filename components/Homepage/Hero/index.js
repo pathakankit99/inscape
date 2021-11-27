@@ -2,7 +2,7 @@ import React from 'react'
 import AOS from 'aos';
 function index() {
     return (
-      <section className="relative min-h-screen lg:h-120vh">
+      <section style={{maxWidth:"100vw", overflowX:"hidden"}} className="relative min-h-screen lg:h-120vh">
         <img
           className="absolute top-0 bottom-0 hero-img"
           src="/images/bg.jpg"

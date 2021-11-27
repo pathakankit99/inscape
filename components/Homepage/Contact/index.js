@@ -59,7 +59,7 @@ function index() {
           }}
           className="container2 z-10 bg-white rounded-3xl lg:h-auto p-6 text-center lg:text-left w-full lg:w-6/12 h-full lg:h-auto lg:p-16 flex items-center justify-center lg:justify-start">
           <div className="w-full">
-            <h5 className="pb-4 section__title font-medium text-4xl p-0">Issues? Contact Us</h5>
+            <h5 className="pb-4 section__title font-medium text-3xl p-0">Intrested? Contact Us</h5>
             <div className="mb-4">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"

@@ -7,7 +7,10 @@ function index() {
     const [feature2, setFeature2] = useState(false);
     const [feature3, setFeature3] = useState(false);
   return (
-    <section className="features min-h-screen features__area pt-24 relative container2">
+    <section
+      style={{ maxWidth: "100vw", overflowX: "hidden" }}
+      className="features min-h-screen features__area pt-24 relative container2"
+    >
       <div className="features__shape-2">
         <img
           className="features-2-dot"
@@ -57,7 +60,7 @@ function index() {
               <h2 className="section__title section__title-2">
                 We work together to create beautiful products.
               </h2>
-              <p>Our products are </p>
+              <p>Creaing products that are </p>
             </div>
           </div>
         </div>

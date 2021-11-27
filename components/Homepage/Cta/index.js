@@ -2,7 +2,10 @@ import React from 'react'
 
 function index() {
     return (
-      <section className="cta__area  relative">
+      <section
+        style={{ maxWidth: "100vw", overflowX: "hidden" }}
+        className="cta__area  relative"
+      >
         <div className="circle-animation cta-1">
           <span></span>
         </div>
@@ -55,13 +58,16 @@ function index() {
             <div className="w-full">
               <div className="w-full">
                 <div className="cta__wrapper flex justify-between items-center flex-wrap">
-                  <div className="cta__content mb-6 text-2xl md:text-3xl lg:text-5xl">
-                    <h3 className="cta__title">
+                  <div className="cta__content text-2xl md:text-3xl lg:text-5xl mb-16 md:mb-0">
+                    <h3 className="cta__title text-md md:text-3xl lg:text-5xl">
                       Go Digital. Grow Online. <br /> With Our Support.
                     </h3>
                   </div>
                   <div className="cta__btn">
-                    <button className="w-btn w-btn-white" href="/contact">
+                    <button
+                      className="w-btn w-btn-white text-xs md:text-md lg:text-xl"
+                      href="/contact"
+                    >
                       Get Free Estimate
                     </button>
                   </div>

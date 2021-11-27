@@ -87,8 +87,8 @@ function Navbar() {
             <li onClick={()=>setOpen(!open)} className="pointer mb-6" onClick={()=>setOpen(!open)}>
               <Link href="/">
                 <div className="flex">
-                  <div  className="text-3xl pr-4">01.</div>
-                  <div className={"logo text-7xl hover:underline "} title="HOME">
+                  <div  className="lg:text-3xl pr-4">01.</div>
+                  <div className={"logo text-3xl lg:text-7xl hover:underline "} title="HOME">
                     HOME
                   </div>
                 </div>
@@ -97,8 +97,8 @@ function Navbar() {
             {/* <li onClick={()=>setOpen(!open)} className="pointer mb-6">
               <Link href="#about-us">
                  <div className="flex">
-                  <div  className="text-3xl pr-4">02.</div>
-                <div className={"logo text-7xl hover:underline  "} title="ABOUT US">
+                  <div  className="lg:text-3xl pr-4">02.</div>
+                <div className={"logo text-3xl lg:text-7xl hover:underline  "} title="ABOUT US">
                   ABOUT US
                 </div>
                 </div>
@@ -107,8 +107,8 @@ function Navbar() {
             <li onClick={()=>setOpen(!open)} className="pointer mb-6">
               <Link href="#contact-us">
                 <div className="flex">
-                  <div  className="text-3xl pr-4">03.</div>
-                <div className={"logo text-7xl hover:underline"} title="CONTACT US">
+                  <div  className="lg:text-3xl pr-4">03.</div>
+                <div className={"logo text-3xl lg:text-7xl hover:underline"} title="CONTACT US">
                   CONTACT US
                 </div>
                 </div>
