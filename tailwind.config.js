@@ -49,7 +49,7 @@ module.exports = {
           primary: "#070337",
           secondary: "white",
           accent: "#7127ea",
-          300: "#AB7BB7",
+          para: "#6c6a8a",
           400: "#9359A1",
           500: "#72457D",
           600: "#513159",

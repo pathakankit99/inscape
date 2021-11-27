@@ -2,7 +2,7 @@ import React from 'react'
 
 function index() {
     return (
-      <section className="cta__area -mb-24 relative">
+      <section className="cta__area  relative">
         <div className="circle-animation cta-1">
           <span></span>
         </div>
