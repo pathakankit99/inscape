@@ -8,6 +8,7 @@ import "../components/Homepage/homepage.scss";
 import "../components/Homepage/Hero/style.scss";
 import "../components/Homepage/Services/style.scss";
 import "../components/Homepage/Cta/style.scss";
+import "../components/Homepage/Features/style.scss";
 // pages/_app.js
 import { useEffect } from 'react';
 import { Provider } from "next-auth/client"
