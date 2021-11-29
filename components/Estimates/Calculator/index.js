@@ -89,7 +89,7 @@ function index() {
         //   animationDelay: "0.7s",
         // }}
       >
-        <div className="bg-white relative shadow-2xl w-full sm:w-8/12 p-6 rounded-2xl -m-16 sm:-m-24 md:-m-36  lg:-m-24 xl:-m-36 z-50 ">
+        <div className="bg-white relative shadow-2xl w-full sm:w-8/12 lg:w-7/12 container2 p-6 rounded-2xl -m-16 sm:-m-24 md:-m-36  lg:-m-24 xl:-m-36 z-50 ">
           <h5 className="section__title text-center font-medium text-3xl p-0">
             Your Estimate is{" "}
             {total && type !== "none" && tech !== "none" ? total : ""}
