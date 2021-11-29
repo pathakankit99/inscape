@@ -66,7 +66,7 @@ function index() {
                   <div className="cta__btn">
                     <button
                       className="w-btn w-btn-white text-xs md:text-md lg:text-xl"
-                      href="/contact"
+                      href="/estimate"
                     >
                       Get Free Estimate
                     </button>
