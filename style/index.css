@@ -39,7 +39,7 @@ body {
 
 /* // heading start */
 .section__title{
-    @apply p-6 lg:py-12 lg:px-0 text-2xl md:text-3xl lg:text-5xl font-extrabold text-brand-primary;
+    @apply p-6 lg:py-12 lg:px-0 text-2xl md:text-3xl lg:text-4xl font-extrabold text-brand-primary;
 }
 /* //heading end */
 p {
@@ -48,4 +48,12 @@ p {
   color: #6c6a8a;
   margin-bottom: 15px;
   line-height: 26px;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: #070337;
+    margin-top: 0;
+    font-weight: 700;
+    line-height: 1.2;
+    -webkit-transition: .3s;
+    transition: .3s;
 }

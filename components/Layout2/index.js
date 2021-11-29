@@ -1,6 +1,7 @@
 // components/layout.js
 import Navbar from "../Navbar";
 import Head from "next/head"
+import Footer from "../Footer"
 export default function Layout2({ children, textColor, bgColor,title, description }) {
   return (
     <>
@@ -25,7 +26,7 @@ export default function Layout2({ children, textColor, bgColor,title, descriptio
         {/* <Alert preview={preview} /> */}
         <main>{children}</main>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

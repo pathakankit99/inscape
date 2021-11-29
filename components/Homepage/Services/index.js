@@ -16,7 +16,10 @@ function index() {
      },
    };
   return (
-    <section className="services container2 relative min-h-screen">
+    <section
+      style={{ maxWidth: "100vw", overflowX: "hidden" }}
+      className="services container2 relative min-h-screen py-24"
+    >
       {/* <img className="absolute top-0 bottom-0 hero-img" src="/images/bg.jpg" /> */}
       <div className="services__shape">
         <img
@@ -61,7 +64,7 @@ function index() {
         >
           <div className="pb-12 flex justify-center w-full">
             <Lottie
-            height={150}
+              height={150}
               width={150}
               options={{
                 animationData: ecommerce,
@@ -79,9 +82,7 @@ function index() {
               use for both you and your customers.
             </p>
             <div className="absolute bottom-0 flex justify-center left-0 right-0">
-              <button className="w-btn w-btn-2 w-8/12 my-6">
-                Get Quote
-              </button>
+              <button className="w-btn w-btn-2 w-8/12 my-6">Get Quote</button>
             </div>
           </div>
         </div>
@@ -94,7 +95,7 @@ function index() {
         >
           <div className="pb-12 flex justify-center w-full">
             <Lottie
-            height={150}
+              height={150}
               width={150}
               options={{
                 animationData: startups,
@@ -112,9 +113,7 @@ function index() {
               features at a pocket friendly price.
             </p>
             <div className="absolute bottom-0 flex justify-center left-0 right-0">
-              <button className="w-btn w-btn-2 w-8/12 my-6">
-                Get Quote
-              </button>
+              <button className="w-btn w-btn-2 w-8/12 my-6">Get Quote</button>
             </div>
           </div>
         </div>
@@ -127,7 +126,7 @@ function index() {
         >
           <div className="pb-12 flex justify-center w-full">
             <Lottie
-            height={150}
+              height={150}
               width={150}
               options={{
                 animationData: resume,
@@ -145,9 +144,7 @@ function index() {
               career at a super pocket friendly price.
             </p>
             <div className="absolute bottom-0 flex justify-center left-0 right-0">
-              <button className="w-btn w-btn-2 w-8/12 my-6">
-                Get Quote
-              </button>
+              <button className="w-btn w-btn-2 w-8/12 my-6">Get Quote</button>
             </div>
           </div>
         </div>
@@ -160,7 +157,7 @@ function index() {
         >
           <div className="pb-12 flex justify-center w-full">
             <Lottie
-            height={150}
+              height={150}
               width={150}
               options={{
                 animationData: music,
@@ -178,9 +175,7 @@ function index() {
               opening an ocean of opportunities for you.
             </p>
             <div className="absolute bottom-0 flex justify-center left-0 right-0">
-              <button className="w-btn w-btn-2 w-8/12 my-6">
-                Get Quote
-              </button>
+              <button className="w-btn w-btn-2 w-8/12 my-6">Get Quote</button>
             </div>
           </div>
         </div>

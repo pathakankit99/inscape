@@ -147,11 +147,13 @@
     z-index: 1;
 }
 .hero__title{
-    font-size: 70px;
     font-weight: 700;
     line-height: 1.14;
     margin-bottom: 20px;
     color: #070337;
+}
+.hero__title{
+    @apply text-5xl md:text-6xl lg:text-7xl;
 }
 .hero__content p{
     font-size: 20px;
@@ -188,10 +190,10 @@
     height: 54px;
     line-height: 50px;
     padding: 0 38px;
-    font-size: 18px;
+    // font-size: 18px;
 }
 .w-btn {
-    font-size: 15px;
+    // font-size: 15px;
     color: #fff;
     background: #7127ea;
     height: 44px;

@@ -7,7 +7,10 @@ function index() {
     const [feature2, setFeature2] = useState(false);
     const [feature3, setFeature3] = useState(false);
   return (
-    <section className="features min-h-screen features__area pt-24 relative container2">
+    <section
+      style={{ maxWidth: "100vw", overflowX: "hidden" }}
+      className="features min-h-screen features__area pt-24 relative container2"
+    >
       <div className="features__shape-2">
         <img
           className="features-2-dot"
@@ -57,7 +60,7 @@ function index() {
               <h2 className="section__title section__title-2">
                 We work together to create beautiful products.
               </h2>
-              <p>Our products are </p>
+              <p>Creaing products that are </p>
             </div>
           </div>
         </div>
@@ -132,37 +135,117 @@ function index() {
             </div>
           </div>
           <div className="w-full md:w-5/12 lg:w-8/12 pr-16">
-            <div
-              className="tab-pane fade show active"
-              id="security"
-              role="tabpanel"
-              aria-labelledby="security-tab"
-            >
-              <div className="features__thumb">
-                <div className="features__thumb-inner">
-                  <img
-                    className="fea-thumb"
-                    src="/images/icon/features/home-1/fea-thumb.jpg"
-                    alt=""
-                  />
-                  <img
-                    className="fea-sm"
-                    src="/images/icon/features/home-1/fea-sm.jpg"
-                    alt=""
-                  />
-                  <img
-                    className="fea-sm-2"
-                    src="/images/icon/features/home-1/fea-sm-2.jpg"
-                    alt=""
-                  />
-                  <img
-                    className="fea-2-shape"
-                    src="/images/icon/features/home-1/features-shape.png"
-                    alt=""
-                  />
+            {feature1 && (
+              <div
+                className="tab-pane show active w-10/12 center"
+                data-aos="fade-up"
+                data-aos-duration={1000}
+                data-aos-delay=".3s"
+                style={{
+                  visibility: "visible",
+                  animationDelay: "0.3s",
+                }}
+              >
+                <div className="features__thumb">
+                  <div className="features__thumb-inner">
+                    <img
+                      className="fea-thumb"
+                      src="/images/icon/features/home-1/speed.jpg"
+                      alt=""
+                    />
+                    <img
+                      className="fea-sm"
+                      src="/images/icon/features/home-1/fea-sm.jpg"
+                      alt=""
+                    />
+                    <img
+                      className="fea-sm-2"
+                      src="/images/icon/features/home-1/fea-sm-2.jpg"
+                      alt=""
+                    />
+                    <img
+                      className="fea-2-shape"
+                      src="/images/icon/features/home-1/features-shape.png"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+            {feature2 && (
+              <div
+                className="tab-pane show active w-10/12 center"
+                data-aos="fade-up"
+                data-aos-duration={1000}
+                data-aos-delay=".3s"
+                style={{
+                  visibility: "visible",
+                  animationDelay: "0.3s",
+                }}
+              >
+                <div className="features__thumb">
+                  <div className="features__thumb-inner">
+                    <img
+                      className="fea-thumb"
+                      src="/images/icon/features/home-1/security.jpg"
+                      alt=""
+                    />
+                    <img
+                      className="fea-sm"
+                      src="/images/icon/features/home-1/fea-sm.jpg"
+                      alt=""
+                    />
+                    <img
+                      className="fea-sm-2"
+                      src="/images/icon/features/home-1/fea-sm-2.jpg"
+                      alt=""
+                    />
+                    <img
+                      className="fea-2-shape"
+                      src="/images/icon/features/home-1/features-shape.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
+            {feature3 && (
+              <div
+                className="tab-pane show active w-10/12 center"
+                data-aos="fade-up"
+                data-aos-duration={1000}
+                data-aos-delay=".3s"
+                style={{
+                  visibility: "visible",
+                  animationDelay: "0.3s",
+                }}
+              >
+                <div className="features__thumb">
+                  <div className="features__thumb-inner">
+                    <img
+                      className="fea-thumb"
+                      src="/images/icon/features/home-1/responsive.jpg"
+                      alt=""
+                    />
+                    <img
+                      className="fea-sm"
+                      src="/images/icon/features/home-1/fea-sm.jpg"
+                      alt=""
+                    />
+                    <img
+                      className="fea-sm-2"
+                      src="/images/icon/features/home-1/fea-sm-2.jpg"
+                      alt=""
+                    />
+                    <img
+                      className="fea-2-shape"
+                      src="/images/icon/features/home-1/features-shape.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -63,7 +63,7 @@
 //background end
 //services offered start
 .card{
-    @apply relative p-6 w-full md:w-5/12 lg:w-3/12 bg-white shadow-xl rounded-3xl border-t-4 border-yellow-400 mb-6 lg:mr-6 h-80vh;
+    @apply relative p-6 w-full md:w-5/12 lg:w-3/12 bg-white shadow-xl rounded-3xl border-t-4 border-yellow-400 mb-6 lg:mr-6 pb-24 lg:pb-0 lg:h-80vh;
 }
 .card .card-heading{
     @apply text-xl lg:text-2xl font-bold text-center text-brand pb-6;
