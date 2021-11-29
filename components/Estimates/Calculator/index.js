@@ -1,60 +1,82 @@
 import React,{useState, useEffect} from 'react'
-const typeOptions = {
-  ecommerce: {
-    price: 3000,
-  },
-  resume: {
-    price: 1500,
+
+function index() {
+  const [type, setType] = useState("none");
+  const [tech, setTech] = useState("none");
+  const [pages, setPages] = useState("none");
+  const [template, setTemplate] = useState(false);
+  const [seo, setSEO] = useState(false);
+  const [total, setTotal] = useState(0);
+  const typeOptions = {
+    ecommerce: {
+      price: 6000,
+    },
+    resume: {
+      price: 3000,
     },
     startup: {
-      price:1500,
+      price: 3000,
     },
     blog: {
-        price: 3000,
+      price: 6000,
+    },
+    portfolio: {
+      price: 3000,
+    },
+    "single-product": {
+      price: 4500
     }
-};
-const pageOptions = {
-  "1": {
-    price: 1000,
-  },
-  "2": {
-    price: 2000,
-  },
-  "3": {
-    price: 3000,
-  },
-  "4": {
-    price: 4000,
+  };
+  const pagesOptions = {
+    "1": {
+      price: 1000,
+    },
+    "2": {
+      price: 2000,
+    },
+    "3": {
+      price: 3000,
+    },
+    "4": {
+      price: 4000,
     },
     "4+": {
       price: 5000,
-  }
-};
-const techOptions = {
-  wordpress: {
-    price: 2000,
-  },
-  react: {
-    price: 3000,
-  },
-  next: {
-    price: 4000,
-  },
-  html: {
-    price: 2000,
-  },
-};
-function index() {
-    const [type, setType] = useState("none");
-    const [totalPrice, setTotal] = useState(0);
-    useEffect(() => {
-        console.log(totalPrice,'before');
-        setTotal(
-          () => totalPrice + typeOptions[type]?.price?typeOptions[type]?.price:0
-        );
-    }, [type])
+    },
+  };
+  const techOptions = {
+    wordpress: {
+      price: 2000,
+    },
+    react: {
+      price: 4000,
+    },
+    nextjs: {
+      price: 6000,
+    },
+    html: {
+      price: type === "ecommerce" ? 10000 : 2000,
+    },
+  };
+  useEffect(() => {
+    setTotal(0);
+    console.log(
+      typeOptions[type]?.price ? typeOptions[type]?.price : 0,
+      "+",
+      techOptions[tech]?.price ? techOptions[tech]?.price : 0,
+      "+",
+      pagesOptions[pages]?.price ? pagesOptions[pages]?.price : 0
+    );
+    const typePrice = typeOptions[type]?.price ? typeOptions[type]?.price : 0;
+    const techPrice = techOptions[tech]?.price ? techOptions[tech]?.price : 0;
+    const pagesPrice = pagesOptions[pages]?.price ? pagesOptions[pages]?.price : 0;
     
-        console.log(totalPrice);
+
+    const temp = typePrice + techPrice + pagesPrice + (template? -2000 : 0) + (seo? + 3000 : 0);
+    
+    setTotal(temp);
+  }, [type, tech, pages, template, seo])
+    
 
     return (
       <div
@@ -67,10 +89,12 @@ function index() {
         //   animationDelay: "0.7s",
         // }}
       >
-        <div className="bg-white relative shadow-2xl container2 rounded-2xl -m-16 sm:-m-24 md:-m-36  lg:-m-24 xl:-m-36 z-50 ">
-          <h5 className="pb-4 section__title font-medium text-3xl p-0">
-            Your Estimate is {totalPrice?totalPrice:""}
+        <div className="bg-white relative shadow-2xl w-full sm:w-8/12 p-6 rounded-2xl -m-16 sm:-m-24 md:-m-36  lg:-m-24 xl:-m-36 z-50 ">
+          <h5 className="section__title text-center font-medium text-3xl p-0">
+            Your Estimate is{" "}
+            {total && type !== "none" && tech !== "none" ? total : ""}
           </h5>
+          <p className="pb-4 -mt-4 text-center">*These are rough estimates only.</p>
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
@@ -81,8 +105,8 @@ function index() {
             <select
               className="appearance-none border-2 border-brand-accent rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="type"
-                type="text"
-                onChange={(e)=>setType(e.target.value)}
+              type="text"
+              onChange={(e) => setType(e.target.value)}
             >
               <option value="none">None</option>
               <option value="ecommerce">Ecommerce</option>
@@ -94,6 +118,7 @@ function index() {
               <option value="custom">Custom</option>
             </select>
           </div>
+
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
@@ -124,6 +149,26 @@ function index() {
               placeholder="+91 701785903"
             />
           </div>
+          <div className="mb-4">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="tech"
+            >
+              Tech*
+            </label>
+            <select
+              className="appearance-none border-2 border-brand-accent rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="tech"
+              type="text"
+              onChange={(e) => setTech(e.target.value)}
+            >
+              <option value="none">None</option>
+              <option value="html">HTML/CSS</option>
+              <option value="wordpress">Wordpress</option>
+              <option value="react">React</option>
+              <option value="nextjs">NextJs</option>
+            </select>
+          </div>
 
           <div className="mb-4">
             <label
@@ -133,10 +178,12 @@ function index() {
               Pages*
             </label>
             <select
+              onChange={(e) => setPages(e.target.value)}
               className="appearance-none border-2 border-brand-accent rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="pages"
               type="text"
             >
+              <option value="none">Choose Pages</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -146,14 +193,27 @@ function index() {
           </div>
 
           <div className="mb-4 flex items-center p-0">
-            <input type="checkbox" id="ui" name="ui" />
+            <input
+              value={template}
+              onChange={() => setTemplate(!template)}
+              type="checkbox"
+              id="ui"
+              name="ui"
+            />
             <label
               className="block text-gray-700 text-sm font-bold px-2"
               htmlFor="ui"
             >
-              UI Ready
+              Template
             </label>
-            <input type="checkbox" id="seo" name="seo" className="ml-6" />
+            <input
+              value={seo}
+              onChange={() => setSEO(!seo)}
+              type="checkbox"
+              id="seo"
+              name="seo"
+              className="ml-6"
+            />
             <label
               className="block text-gray-700 text-sm font-bold pl-2"
               htmlFor="seo"
@@ -162,7 +222,7 @@ function index() {
             </label>
           </div>
           <div className="flex my-8 ">
-            <button className="w-btn w-btn-2">submit</button>
+            <button className="w-btn w-btn-2">Click to get discount</button>
           </div>
         </div>
       </div>

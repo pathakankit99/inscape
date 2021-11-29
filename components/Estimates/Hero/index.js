@@ -354,11 +354,11 @@ function Index() {
             Calculate an estimate with respect to your requirements.
           </h1>
           <h5 className="md:text-center text-indigo-400 font-light py-6">
-            Feel free to contact us for a sweet discount :)
+            Are you an Influencer? Contact us for sweet discount :)
           </h5>
           <div className="flex md:justify-center items-center">
             <button className="w-btn w-btn-white text-sm md:text-lg">
-              Get Started
+              Get 90% off.
             </button>
           </div>
         </div>
