@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Link from 'next/link'
 function index() {
     return (
       <section
@@ -64,12 +64,14 @@ function index() {
                     </h3>
                   </div>
                   <div className="cta__btn">
-                    <button
-                      className="w-btn w-btn-white text-xs md:text-md lg:text-xl"
-                      href="/estimate"
-                    >
-                      Get Free Estimate
-                    </button>
+                    <Link href="/estimate">
+                      <button
+                        className="w-btn w-btn-white text-xs md:text-md lg:text-xl"
+                        href="/estimate"
+                      >
+                        Get Free Estimate
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

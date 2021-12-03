@@ -1,5 +1,6 @@
 import React from 'react'
 import { AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
+import Link from "next/link"
 function index() {
     return (
       <footer className="footer__area bg-gray-200 pt-24 overflow-hidden relative container2">
@@ -31,16 +32,17 @@ function index() {
                 <div className="footer__widget mb-24">
                   <div className="footer__widget-title mb-6">
                     <div className="footer__logo">
-                      <a href="/">
+                      <Link href="/">
                         <img
-                          src="https://wetland-react.vercel.app/img/logo/logo.png"
+                          width={100}
+                          src="../images/logo/logo_dark_cropped.png"
                           alt="logo"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="footer__widget-content">
-                    <p>Ever since we started using we’ve , and more.</p>
+                    <p>Converting vision into reality.</p>
                   </div>
                 </div>
               </div>
@@ -67,11 +69,11 @@ function index() {
                         <li>
                           <a href="/">Privacy Policy</a>
                         </li>
-                        <li>
+                        {/* <li>
                           <a href="/">Cookies</a>
-                        </li>
+                        </li> */}
                         <li>
-                          <a href="/">Integrations</a>
+                          <a href="/">Refund</a>
                         </li>
                       </ul>
                     </div>
@@ -90,23 +92,23 @@ function index() {
               >
                 <div className="footer__widget mb-24">
                   <div className="footer__widget-title mb-6">
-                    <h3>Customer</h3>
+                    <h3>Quick Links</h3>
                   </div>
                   <div className="footer__widget-content">
                     <div className="footer__link footer__link-2">
                       <ul>
                         <li>
-                          <a href="/services-details#">Home</a>
+                          <Link href="/">Home</Link>
                         </li>
                         <li>
-                          <a href="/services-details#">Product</a>
+                          <Link href="/#contact-us">Contact Us</Link>
                         </li>
                         <li>
-                          <a href="/services-details#">Pricing</a>
+                          <Link href="/estimate">Estimate</Link>
                         </li>
-                        <li>
+                        {/* <li>
                           <a href="/services-details#">Integrations</a>
-                        </li>
+                        </li> */}
                       </ul>
                     </div>
                   </div>
@@ -124,22 +126,19 @@ function index() {
               >
                 <div className="footer__widget mb-24">
                   <div className="footer__widget-title mb-6">
-                    <h3>Product</h3>
+                    <h3>Offers</h3>
                   </div>
                   <div className="footer__widget-content">
                     <div className="footer__link footer__link-2">
                       <ul>
                         <li>
-                          <a href="/services-details#">Getting Started</a>
+                          <a href="/">Influencer Discount</a>
                         </li>
                         <li>
-                          <a href="/services-details#">Style Guide</a>
+                          <a href="/">Student Offer</a>
                         </li>
                         <li>
-                          <a href="/services-details#">Licences</a>
-                        </li>
-                        <li>
-                          <a href="/services-details#">Changelog</a>
+                          <a href="/">Coupon Validation</a>
                         </li>
                       </ul>
                     </div>

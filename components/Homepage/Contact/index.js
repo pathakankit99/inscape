@@ -44,7 +44,6 @@ function index() {
   
     const handleSubmit=async(e)=>{
       e.preventDefault()
-      console.log("clicked");
       if(name && email && contact)
       {
         const data = {
@@ -82,9 +81,9 @@ function index() {
       else {
         setError("Fill All Required Fields");
       }
-  }
+    }
     return (
-      <section id="contact-us"
+      <section 
          data-aos="fade-up"
             data-aos-duration={1000}
             data-aos-delay=".5s"
@@ -94,11 +93,12 @@ function index() {
               animationDelay: "0.5s",
               overflow: "hidden",
             }}
-        className="lg:max-h-screen bg-yellow-400 flex justify-center items-center flex-wrap min-h-screen lg:max-h-screen overflow-hidden">
+        className="lg:max-h-screen bg-yellow-400 flex justify-center items-center flex-wrap min-h-screen overflow-hidden pt-24">
         <div className="w-full lg:w-6/12 h-screen -mb-36 md:-mb-16 lg:-mb-16" onMouseEnter={()=>setHands_up(true)} onMouseLeave={()=>setHands_up(false)}>
           <RiveComponent />
         </div>
         <div
+           id="contact-us"
          data-aos="fade-up"
             data-aos-duration={1000}
             data-aos-delay=".5s"
@@ -110,10 +110,15 @@ function index() {
           }}
           className="container2 z-10 bg-white rounded-3xl lg:h-auto p-6 text-center lg:text-left w-full lg:w-6/12 h-full lg:h-auto lg:px-16 flex items-center justify-center lg:justify-start">
           <div className="w-full">
-            <h5 className=" section__title font-medium text-3xl">Interested? Contact Us</h5>
+            <h5  className=" section__title font-medium text-3xl">Interested? Contact Us</h5>
             {
               error && (
                 <div className="err">{ error}</div>
+              )
+            }
+            {
+              success && (
+                <div className="success">{ success}</div>
               )
             }
             <div className="mb-4">

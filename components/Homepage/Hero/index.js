@@ -1,5 +1,6 @@
 import React from 'react'
 import AOS from 'aos';
+import Link from 'next/link';
 function index() {
     return (
       <section
@@ -61,9 +62,9 @@ function index() {
                 data-aos-delay=".7s"
                 style={{ visibility: "visible", animationDelay: "0.7s" }}
               >
-                <a href="/estimate">
+                <Link href="/estimate">
                   <button className="w-btn w-btn-2">Get Free Estimates</button>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
