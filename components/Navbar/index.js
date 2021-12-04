@@ -49,7 +49,7 @@ function Navbar() {
       // document.querySelector(".menuOverlay").className = "menuOverlay text-bismark-700 lg:text-white  bg-yellow-500 lg:bg-bismark-700 menuOverlayScroll";
       // document.querySelector(".quoteButton").className= "quoteButton  mr-16 px-4 py-1 rounded font-normal text-white  bg-yellow-400 ";
     } else {
-      document.querySelector(".navbar").className = "navbar fixed p-6 flex items-center justify-between left-0 right-0 container2";
+      document.querySelector(".navbar").className = "navbar fixed px-6 py-3 flex items-center justify-between left-0 right-0 container2";
       // document.querySelector(".menuOverlay").className = "menuOverlay text-bismark-700 lg:text-white  bg-yellow-500 lg:bg-bismark-700 ";
       // document.querySelector(".quoteButton").className ="quoteButton mr-16 px-4 py-1 rounded font-normal text-bismark-700 lg:text-white  bg-yellow-300 lg:bg-bismark-700 ";
     }
@@ -64,13 +64,16 @@ function Navbar() {
   }, [])
 
   return (
-    <nav className="navbar fixed p-6 flex items-center justify-between left-0 right-0 container2 ">
-      <div className="logoContainer">
-        <div className={"text-3xl logo text-brand-accent font-bold"}>
-          INSCAPE
-        </div>
+    <nav className="navbar px-6 py-3 fixed flex items-center justify-between left-0 right-0 container2 ">
+      <div className="">
+        <Link href="/">
+          <div className="flex items-center cursor-pointer">
+            <img width={70} src="/images/logo/logo_dark_cropped.png" />
+            <h2 className="text-brand-accent text-2xl uppercase font-bold">Inscape</h2>
+          </div>
+        </Link>
       </div>
-      <div className={"flex items-center "}>
+      <div className={"flex  items-center "}>
         <div
           onClick={()=>setOpen(!open)}
           className={"relative flex items-center justify-center"}
@@ -105,11 +108,21 @@ function Navbar() {
               </Link>
             </li> */}
             <li onClick={()=>setOpen(!open)} className="pointer mb-6">
-              <Link href="#contact-us">
+              <Link href="/#contact-us">
+                <div className="flex">
+                  <div  className="lg:text-3xl pr-4">02.</div>
+                <div className={"logo text-3xl lg:text-7xl hover:underline"} title="CONTACT US">
+                  CONTACT US
+                </div>
+                </div>
+              </Link>
+            </li>
+            <li onClick={()=>setOpen(!open)} className="pointer mb-6">
+              <Link href="/estimate">
                 <div className="flex">
                   <div  className="lg:text-3xl pr-4">03.</div>
                 <div className={"logo text-3xl lg:text-7xl hover:underline"} title="CONTACT US">
-                  CONTACT US
+                  ESTIMATE
                 </div>
                 </div>
               </Link>

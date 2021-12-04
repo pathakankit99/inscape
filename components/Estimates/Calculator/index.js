@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react'
-
+import axios from 'axios'
 function index() {
   const [type, setType] = useState("none");
   const [tech, setTech] = useState("none");
@@ -7,6 +7,13 @@ function index() {
   const [template, setTemplate] = useState(false);
   const [seo, setSEO] = useState(false);
   const [total, setTotal] = useState(0);
+
+  
+  const [email, setEmail] = useState("");
+  const [contact, setContact] = useState("");
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+
   const typeOptions = {
     ecommerce: {
       price: 6000,
@@ -76,6 +83,43 @@ function index() {
     
     setTotal(temp);
   }, [type, tech, pages, template, seo])
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (type && email && contact && tech && pages) {
+      const data = {
+        type,
+        email,
+        contact,
+        tech,
+        pages,
+        template,
+        seo,
+        total
+      };
+      if (contact.length > 9) {
+        await axios
+          .post("/api/quote", data)
+          .then((res) => {
+            setError("");
+            setSuccess("We will Contact you soon.");
+            setEmail("");
+            setContact("");
+            setType("none");
+            setPages("none");
+            setTech("none");
+          })
+          .catch((err) => {
+            // console.log(err);
+            setSuccess("")
+            setError("Some Problem Occured");
+          });
+      } else {
+        setError("Enter a valid phone number");
+      }
+    } else {
+      setError("Fill All Required Fields");
+    }
+  };
     
 
     return (
@@ -94,7 +138,11 @@ function index() {
             Your Estimate is{" "}
             {total && type !== "none" && tech !== "none" ? total : ""}
           </h5>
-          <p className="pb-4 -mt-4 text-center">*These are rough estimates only.</p>
+          <p className="pb-4 -mt-4 text-center">
+            *These are rough estimates only.
+          </p>
+          {error && <div className="err">{error}</div>}
+          {success && <div className="success">{success}</div>}
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
@@ -127,6 +175,8 @@ function index() {
               Email*
             </label>
             <input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="appearance-none border-2 border-brand-accent rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="email"
               type="email"
@@ -141,8 +191,8 @@ function index() {
               Contact Number*
             </label>
             <input
-              onFocus={() => setCheck(true)}
-              onBlur={() => setCheck(false)}
+              value={contact}
+              onChange={(e) => setContact(e.target.value)}
               className="appearance-none border-2 border-brand-accent rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="contact"
               type="number"
@@ -222,7 +272,7 @@ function index() {
             </label>
           </div>
           <div className="flex my-8 ">
-            <button className="w-btn w-btn-2">Click to get discount</button>
+            <button className="w-btn w-btn-2" onClick={(e)=>handleSubmit(e)}>Click to get discount</button>
           </div>
         </div>
       </div>

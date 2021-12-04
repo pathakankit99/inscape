@@ -6,7 +6,7 @@ import * as ecommerce from "../../../public/lotties/ecommerce.json";
 import * as startups from "../../../public/lotties/startups.json";
 import * as resume from "../../../public/lotties/resume.json";
 import * as music from "../../../public/lotties/music.json";
-
+import Link from "next/link";
 function index() {
    const defaultOptions = {
      loop: true,
@@ -82,7 +82,9 @@ function index() {
               use for both you and your customers.
             </p>
             <div className="absolute bottom-0 flex justify-center left-0 right-0">
-              <button className="w-btn w-btn-2 w-8/12 my-6">Get Quote</button>
+              <Link href="/#contact-us">
+                <button className="w-btn w-btn-2 w-8/12 my-6">Get Quote</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -113,7 +115,9 @@ function index() {
               features at a pocket friendly price.
             </p>
             <div className="absolute bottom-0 flex justify-center left-0 right-0">
-              <button className="w-btn w-btn-2 w-8/12 my-6">Get Quote</button>
+              <Link href="/#contact-us">
+                <button className="w-btn w-btn-2 w-8/12 my-6">Get Quote</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -144,7 +148,9 @@ function index() {
               career at a super pocket friendly price.
             </p>
             <div className="absolute bottom-0 flex justify-center left-0 right-0">
-              <button className="w-btn w-btn-2 w-8/12 my-6">Get Quote</button>
+              <Link href="/#contact-us">
+                <button className="w-btn w-btn-2 w-8/12 my-6">Get Quote</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -175,7 +181,9 @@ function index() {
               opening an ocean of opportunities for you.
             </p>
             <div className="absolute bottom-0 flex justify-center left-0 right-0">
-              <button className="w-btn w-btn-2 w-8/12 my-6">Get Quote</button>
+              <Link href="/#contact-us">
+                <button className="w-btn w-btn-2 w-8/12 my-6">Get Quote</button>
+              </Link>
             </div>
           </div>
         </div>
